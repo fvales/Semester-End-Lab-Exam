@@ -1,7 +1,20 @@
 
-public interface Device {
+public abstract class Device {
 	
-	public void getState();
-	public void setState(boolean state);
+	boolean state;
 	
+	public boolean getState()
+	{
+		return state;
+	}
+	
+	public void turnOn ()
+	{
+		this.state = true;
+	}
+	
+	public void turnOf ()
+	{
+		this.state = false;
+	}	
 }
