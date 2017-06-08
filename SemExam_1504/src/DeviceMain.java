@@ -11,7 +11,6 @@ public class DeviceMain {
 		
 		/*Asking HAS object for AC object*/
 		Device MyAc1 = Home.getDevice("AC");
-
 		
 		/*Asking HAS object for Washing Machine object*/
 		Device MyWM1 = Home.getDevice("Washing Machine");
@@ -50,6 +49,24 @@ public class DeviceMain {
 			System.out.println("Light Set on");
 		else
 			System.out.println("Light is Off");
+		
+		TV t = (TV) MyTv1;
+		
+		System.out.println ("Tv Channel up");
+		t.channelUp();
+		System.out.println("TV channel "+t.getChannel());
+		
+		System.out.println ("Tv Channel Down");
+		t.channelDown();
+		System.out.println("TV channel "+t.getChannel());
+		
+		System.out.println ("Tv Volume up");
+		t.volumeUp(); ;
+		System.out.println("TV Volume "+t.getVolume());
+		
+		System.out.println ("Tv Volume Down");
+		t.volumeDown();
+		System.out.println("TV Volume "+t.getVolume());
 	}
 
 }
